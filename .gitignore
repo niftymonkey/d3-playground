@@ -1,0 +1,7 @@
+# IntellJ junks
+.idea/
+*.iml
+
+# Dependency stuffs
+node_modules/
+bower_components/

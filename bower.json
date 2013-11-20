@@ -1,0 +1,14 @@
+{
+  "name": "d3-playground",
+  "version": "0.0.1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "d3": "~3.3.10"
+  }
+}

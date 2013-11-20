@@ -1,0 +1,11 @@
+{
+  "name": "d3-playground",
+  "description": "Playground for building things with D3js",
+  "version": "0.0.1",
+  "author": "Mark Lozano",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-jshint": "~0.7.2"
+  }
+}
