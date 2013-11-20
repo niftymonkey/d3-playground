@@ -27,5 +27,5 @@
             return d;
         });
     
-    circles.style("fill", "blue");
+    circles.style("fill", "red");
 })();

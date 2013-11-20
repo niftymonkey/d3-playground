@@ -40,14 +40,25 @@ module.exports = function(grunt) {
                 files: ['<%= jshint.content.src %>', 'css/**/*.css', 'index.html' ],
                 tasks: ['jshint:content']
             }
+        },
+        connect: {
+            dev: {
+                options: {
+                    port: 9000,
+                    base: ".",
+                    livereload: true
+                }
+            }
         }
     });
 
     // These plugins provide necessary tasks.
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
-
+    grunt.loadNpmTasks('grunt-contrib-connect');
+    
     // Default task.
     grunt.registerTask('default', ['jshint', 'watch']);
+    grunt.registerTask('server', ['connect', 'watch']);
 
 };
