@@ -8,7 +8,7 @@
     var dataset = [ 5, 10, 15, 20, 25 ];
 
     //Create SVG element
-    var svg = d3.select("body")
+    var svg = d3.select("#test-1")
         .append("svg")
         .attr("width", w)
         .attr("height", h);

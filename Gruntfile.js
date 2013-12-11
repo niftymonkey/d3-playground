@@ -28,6 +28,13 @@ module.exports = function(grunt) {
                 src: ['js/**/*.js']
             }
         },
+        csscomb: {
+            dist: {
+                files: {
+                    'css/combed-main.css': ['css/main.css']
+                }
+            }
+        },
         watch: {
             options: {
                 livereload: true
@@ -38,7 +45,7 @@ module.exports = function(grunt) {
             },
             content: {
                 files: ['<%= jshint.content.src %>', 'css/**/*.css', 'index.html' ],
-                tasks: ['jshint:content']
+                tasks: ['jshint:content', 'csscomb:dist']
             }
         },
         connect: {
@@ -46,7 +53,8 @@ module.exports = function(grunt) {
                 options: {
                     port: 9000,
                     base: ".",
-                    livereload: true
+                    livereload: true,
+                    open: true
                 }
             }
         }
@@ -56,9 +64,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-csscomb');
     
     // Default task.
-    grunt.registerTask('default', ['jshint', 'watch']);
+    grunt.registerTask('default', ['jshint', 'csscomb', 'watch']);
     grunt.registerTask('server', ['connect', 'watch']);
 
 };
