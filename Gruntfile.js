@@ -29,6 +29,13 @@ module.exports = function(grunt) {
             }
         },
         csscomb: {
+            options: {
+                expand: true,
+                flatten: true
+//                blockIndent: false,
+//                eofNewline: false,
+//                colorCase: "upper"
+            },
             dist: {
                 files: {
                     'css/combed-main.css': ['css/main.css']
@@ -44,7 +51,7 @@ module.exports = function(grunt) {
                 tasks: ['jshint:gruntfile']
             },
             content: {
-                files: ['<%= jshint.content.src %>', 'css/**/*.css', 'index.html' ],
+                files: ['<%= jshint.content.src %>', 'css/**/main.css', 'index.html' ],
                 tasks: ['jshint:content', 'csscomb:dist']
             }
         },

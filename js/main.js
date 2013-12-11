@@ -1,7 +1,7 @@
 /*global d3 */
 (function() {
     //Width and height
-    var w = 500;
+    var w = 275;
     var h = 50;
 
     //Data
